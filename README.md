@@ -9,7 +9,7 @@ This is just a personal project, which means that updates/changes may occur spon
 
 
 ## Instructions
-For this section, run commands without the " "
+For this section, run commands without the " ". <br>
 Prior to beginning the first step, please update your repositories. On Debian based distributions, this can be done with either:
 "sudo apt update", or "sudo apt-get update".
 
