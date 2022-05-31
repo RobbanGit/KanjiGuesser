@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kanji Guesser - Play</title>
+    <link rel="stylesheet" type="text/css" href="styling/styles.css"/>
+    <script src="playScript.js"></script>
+</head>
+<body>
+
+<h1 id="kanjiDisplayer">Loading Kanji..</h1>
+<h3 id="kanjiGuessStatusLabel">Status: </h3>
+
+<form>
+    <label id="kanjiInputFieldLabel">Write English meaning here:</label>
+    <input type="text" id="kanjiInputField"/>
+</form>
+
+<button id="showHintButton" onclick="showHint()">Show Hint</button>
+
+<label id="hintMeanings" style="display:none;">Meanings: </label>
+<label id="hintOn-readings" style="display: none">On-readings: </label>
+<label id="hintKun-readings" style="display: none">Kun-readings: </label>
+
+
+<button id="playBackButton" onclick="gotoSelectLevel()">Back</button>
+<button id="confirmGuessButton" onclick="checkKanjiGuess()">Check</button>
+<button id="nextKanjiButton" onclick="nextKanji()">Next Kanji</button>
+
+
+</body>
+
+<script>
+
+    title = "Kanji Guesser" + localStorage.getItem('JLPTLevel');
+
+    let kanjiInfo = [];
+    loadKanjis();
+    setTimeout(() => {
+        let randomNumber = Math.floor(Math.random() * kanjiInfo.length + 1);
+        document.getElementById("kanjiDisplayer").innerText = kanjiInfo[randomNumber].kanji;
+    }, 1000);
+
+
+    let nextKanji = () => {
+        let kanjiGuessLabel = document.getElementById("kanjiGuessStatusLabel");
+        kanjiGuessLabel.innerText = "Status: ";
+        kanjiGuessLabel.style.color = "black";
+        let inputField = document.getElementById("kanjiInputField")
+        inputField.value = inputField.defaultValue;
+        let randomNumber = Math.floor(Math.random() * kanjiInfo.length + 1);
+        document.getElementById("kanjiDisplayer").textContent = kanjiInfo[randomNumber].kanji;
+
+    }
+
+
+    let checkKanjiGuess = () => {
+        let textboxValue = document.getElementById("kanjiInputField").value;
+        kanjiInfo.forEach(i => {
+            let correctGuess = false;
+            let kanjiGuessLabel = document.getElementById("kanjiGuessStatusLabel");
+            let kanjiDisplayerValue = document.getElementById("kanjiDisplayer").innerText.valueOf()
+            let guessValue = document.getElementById("kanjiInputField").value;
+            if (i.kanji === kanjiDisplayerValue) {
+                i.meanings.forEach(meaning => {
+                    if (meaning.toLowerCase() === guessValue.toLowerCase()){
+                        correctGuess = true;
+                        kanjiGuessLabel.innerText = "Status: Correct";
+                        kanjiGuessLabel.style.color = 'green';
+                    }
+                })
+            if (correctGuess === false){
+                kanjiGuessLabel.innerText = "Status: Incorrect";
+                kanjiGuessLabel.style.color = 'red';
+            }
+
+                }
+        })
+
+    }
+
+    let showHint = () => {
+        let kanjiDisplayerValue = document.getElementById("kanjiDisplayer").innerText.valueOf();
+        kanjiInfo.forEach(i => {
+            if (i.kanji === kanjiDisplayerValue){
+                let hintMeanings = document.getElementById("hintMeanings");
+                let hintOnReadings = document.getElementById("hintOn-readings");
+                let hintKunReadings = document.getElementById("hintKun-readings");
+
+                hintMeanings.innerText = `Meanings: ${i.meanings}`;
+                hintOnReadings.innerText = `On-readings: ${i.readings_on}`;
+                hintKunReadings.innerText = `Kun-readings: ${i.readings_kun}`;
+
+                hintMeanings.style.display = "block";
+                hintOnReadings.style.display = "block";
+                hintKunReadings.style.display = "block";
+
+                setTimeout(() => {
+                    hintMeanings.style.display = "none";
+                    hintOnReadings.style.display = "none";
+                    hintKunReadings.style.display = "none";
+                }, 5000)
+
+            }
+        })
+    }
+
+    let gotoSelectLevel = () => {
+        window.location = "selectLevel.html"
+    }
+
+
+
+
+</script>
+
+</html>

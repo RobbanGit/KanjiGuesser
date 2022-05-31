@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KanjiGuesser</title>
+    <link rel="stylesheet" type="text/css" href="styling/styles.css"/>
+</head>
+<body>
+
+<button id="selectLevelButton" onclick="gotoSelectLevel()">Select Level</button>
+<button id="aboutButton" onclick="gotoAbout()">About</button>
+<button id="helpButton" onclick="gotoHelp()">Help</button>
+<button id="quitButton" onclick="quit()">Quit</button>
+
+</body>
+
+<script>
+
+
+
+    let gotoSelectLevel = () => {
+        window.location = "selectLevel.html"
+    }
+
+    let gotoAbout = () => {
+        window.location = "about.html";
+    }
+
+    let gotoHelp = () => {
+        window.location = "help.html"
+    }
+
+    let quit = () => {
+        window.close();
+    }
+
+
+</script>
+
+</html>
