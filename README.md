@@ -7,6 +7,11 @@ If a fork is made, a reference to me would be appreciated, but not a must.
 
 This is just a personal project, which means that updates/changes may occur spontaneously, and the project may reach a permanent standstill at any point.
 
+
+## Instructions
+
+Once the npm packages have been installed, locate the root directory of the project (Path/To/KanjiGuesser/), and type the following to start the program: "npm start" (without the " "). 
+
 ## Appreciations to
 
 davidluzgouveia [https://github.com/davidluzgouveia] for providing the Kanji JSON API (kanji-data [https://github.com/davidluzgouveia/kanji-data])

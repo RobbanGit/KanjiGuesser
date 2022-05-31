@@ -10,6 +10,7 @@
 
 <h1 id="kanjiDisplayer">Loading Kanji..</h1>
 <h3 id="kanjiGuessStatusLabel">Status: </h3>
+<label id="scoreId">Score: 0</label>
 
 <form>
     <label id="kanjiInputFieldLabel">Write English meaning here:</label>
@@ -34,7 +35,10 @@
 
     title = "Kanji Guesser" + localStorage.getItem('JLPTLevel');
 
-    let kanjiInfo = [];
+    let score = 0;
+    let alreadyCorrectGuess = false;
+
+    let kanjiInfo = []; //Array with kanji character + kanji data
     loadKanjis();
     setTimeout(() => {
         let randomNumber = Math.floor(Math.random() * kanjiInfo.length + 1);
@@ -50,13 +54,12 @@
         inputField.value = inputField.defaultValue;
         let randomNumber = Math.floor(Math.random() * kanjiInfo.length + 1);
         document.getElementById("kanjiDisplayer").textContent = kanjiInfo[randomNumber].kanji;
-
+        alreadyCorrectGuess = false;
     }
 
 
     let checkKanjiGuess = () => {
-        let textboxValue = document.getElementById("kanjiInputField").value;
-        kanjiInfo.forEach(i => {
+        kanjiInfo.forEach(i => { //i = current kanji Object (kanji character + kanji data)
             let correctGuess = false;
             let kanjiGuessLabel = document.getElementById("kanjiGuessStatusLabel");
             let kanjiDisplayerValue = document.getElementById("kanjiDisplayer").innerText.valueOf()
@@ -67,6 +70,12 @@
                         correctGuess = true;
                         kanjiGuessLabel.innerText = "Status: Correct";
                         kanjiGuessLabel.style.color = 'green';
+                        if (alreadyCorrectGuess === false){
+                            score++;
+                            document.getElementById("scoreId").textContent = `Score: ${score}`;
+                            alreadyCorrectGuess = true;
+                        }
+
                     }
                 })
             if (correctGuess === false){
@@ -81,7 +90,7 @@
 
     let showHint = () => {
         let kanjiDisplayerValue = document.getElementById("kanjiDisplayer").innerText.valueOf();
-        kanjiInfo.forEach(i => {
+        kanjiInfo.forEach(i => { //i = current kanji Object (kanji character + kanji data)
             if (i.kanji === kanjiDisplayerValue){
                 let hintMeanings = document.getElementById("hintMeanings");
                 let hintOnReadings = document.getElementById("hintOn-readings");
