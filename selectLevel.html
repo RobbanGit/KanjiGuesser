@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KanjiGuesser - Select Level</title>
+    <link rel="stylesheet" type="text/css" href="styling/styles.css"/>
+</head>
+<body>
+
+<button id="selectN5Button" onclick="gotoPlay('5')">N5</button>
+<button id="selectN4Button" onclick="gotoPlay('4')">N4</button>
+<button id="selectN3Button" onclick="gotoPlay('3')">N3</button>
+<button id="selectN2Button" onclick="gotoPlay('2')">N2</button>
+<button id="selectN1Button" onclick="gotoPlay('1')">N1</button>
+<button id="selectLevelBackButton" onclick="gotoIndex()">Back</button>
+
+</body>
+
+<script>
+
+
+    function gotoPlay(jlptLevelChosen) {
+        localStorage.setItem('JLPTLevel', jlptLevelChosen);
+    window.location = "play.html"
+    }
+
+
+    let gotoIndex = () => {
+        window.location = "index.html";
+    }
+
+
+
+</script>
+
+</html>

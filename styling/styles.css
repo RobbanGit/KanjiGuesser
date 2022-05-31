@@ -1,0 +1,283 @@
+body {
+    display: flex;
+    align-items: center;
+    text-align: -moz-center;
+}
+
+button{
+    background: gray;
+}
+
+#selectLevelButton {
+    position: fixed;
+    display: inline-block;
+    top: 40%;
+    left: 50%;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#aboutButton {
+    position: fixed;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#helpButton {
+    position: fixed;
+    display: inline-block;
+    top: 60%;
+    left: 50%;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#quitButton {
+    position: fixed;
+    display: inline-block;
+    top: 70%;
+    left: 50%;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#aboutBackButton {
+    position: fixed;
+    display: inline-block;
+    top: 80%;
+    left: 50%;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#aboutCopyrightButton {
+    position: fixed;
+    display: inline-block;
+    top: 90%;
+    left: 50%;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#aboutInfo {
+    font-family: Arial, sans-serif;
+
+}
+
+#selectN5Button {
+    position: fixed;
+    display: inline-block;
+    top: 20%;
+    left: 50%;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#selectN4Button {
+    position: fixed;
+    display: inline-block;
+    top: 30%;
+    left: 50%;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#selectN3Button {
+    position: fixed;
+    display: inline-block;
+    top: 40%;
+    left: 50%;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#selectN2Button {
+    position: fixed;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#selectN1Button {
+    position: fixed;
+    display: inline-block;
+    top: 60%;
+    left: 50%;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+
+
+#selectLevelBackButton {
+    position: fixed;
+    display: inline-block;
+    top: 70%;
+    left: 50%;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#playBackButton{
+    position: fixed;
+    display: inline-block;
+    top: 90%;
+    left: 20%;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#kanjiDisplayer {
+    position: fixed;
+    display: inline-block;
+    left: 30%;
+    top: 20%;
+}
+
+#kanjiInputFieldLabel {
+    position: fixed;
+    display: inline-block;
+    top: 55%;
+    left: 30%;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+#kanjiInputField {
+    position: fixed;
+    display: inline-block;
+    top: 60%;
+    left: 30%;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#confirmGuessButton {
+    position: fixed;
+    display: inline-block;
+    top: 75%;
+    left: 30%;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#nextKanjiButton {
+    position: fixed;
+    display: inline-block;
+    top: 85%;
+    left: 30%;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#kanjiGuessStatusLabel {
+    position: fixed;
+    display: inline-block;
+    top: 10%;
+    right: 10%;
+    border-radius: 5px;
+}
+
+#showHintButton {
+    position: fixed;
+    display: inline-block;
+    top: 20%;
+    right: 10%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#hintMeanings {
+    position: fixed;
+    display: inline-block;
+    top: 30%;
+    right: 10%;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#hintOn-readings {
+    position: fixed;
+    display: inline-block;
+    top: 35%;
+    right: 10%;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#hintKun-readings {
+    position: fixed;
+    display: inline-block;
+    top: 40%;
+    right: 10%;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#aboutAboutLabel {
+    position: fixed;
+    display: inline-block;
+    top: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-weight: bolder;
+}
+
+#aboutInformation {
+    position: fixed;
+    display: inline-block;
+    top: 20%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-weight: bold;
+}
+
+#aboutSources {
+    position: fixed;
+    display: inline-block;
+    top: 40%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-weight: bold;
+}
+
+#aboutExtra {
+    position: fixed;
+    display: inline-block;
+    top: 50%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-weight: bold;
+}
+
+#aboutVersion {
+    position: fixed;
+    display: inline-block;
+    top: 55%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-weight: bold;
+}
+
+#MITLicenseInfo {
+    position: fixed;
+    display: inline-block;
+    top: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+
+#copyrightBackButton {
+    position: fixed;
+    display: inline-block;
+    top: 90%;
+    left: 20%;
+    padding: 10px;
+    border-radius: 7px;
+}

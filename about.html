@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KanjiGuesser - About</title>
+    <link rel="stylesheet" type="text/css" href="styling/styles.css"/>
+</head>
+<body>
+
+<h1 id="aboutAboutLabel">About</h1>
+
+<h4 id="aboutInformation">
+    Kanji Guesser is a program that gives you the opportunity to practice your awesome and amazing kanji skills.
+
+    Note that Kanji Guesser is just a side project, and progress/updates may stop at any time.
+    It is by no means perfect, and may have plenty of design imperfections. Design is not my strong point.
+    I take no responsibility whatsoever regarding issues that may or may not occur when you are using Kanji Guesser.
+
+</h4>
+
+<h4 id="aboutSources">
+    The kanji JSON dataset source is taken from davidluzgouveia (https://github.com/davidluzgouveia)'s repository:
+    kanji-data (https://github.com/davidluzgouveia/kanji-data).
+</h4>
+
+<h4 id="aboutExtra">
+    Kanji Guesser is built using ElectronJS.
+</h4>
+
+<h4 id="aboutVersion">
+    Version: 0.1 (2022-02-12)
+</h4>
+
+<button id="aboutCopyrightButton" onclick="gotoCopyrightLicense()">Copyright Information</button>
+
+
+
+<button id="aboutBackButton" onclick="gotoIndex()">Back</button>
+
+</body>
+
+<script>
+
+    let gotoIndex = () => {
+        window.location = "index.html";
+    }
+
+    let gotoCopyrightLicense = () => {
+        window.location = "copyrightLicense.html";
+    }
+
+
+</script>
+
+</html>
