@@ -10,7 +10,31 @@ This is just a personal project, which means that updates/changes may occur spon
 
 ## Instructions
 
-Once the npm packages have been installed, locate the root directory of the project (Path/To/KanjiGuesser/), and type the following to start the program: "npm start" (without the " "). 
+### Debian based Linux distributions
+For this section, run commands without the " ". <br>
+Prior to beginning the first step, please update your repositories. On Debian based distributions, this can be done with either:
+"sudo apt update", or "sudo apt-get update".
+
+
+The application is built using NodeJS and Electron, first we need to install the latest version of NodeJS(3 steps): <br>
+1: "sudo apt install curl" <br>
+2: "curl -sL https://deb.nodesource.com/setup_17.x | sudo -E bash -"<br>
+3: "sudo apt-get install -y nodejs"
+
+
+If you do not already have the latest npm version installed, install it with:
+"sudo npm install npm@latest -g"
+
+
+Then we need to intall electron with the following command(root of program(path/to/KanjiGuesser)):
+"npm install electron"
+
+
+If the compiler complains about libgconf-2.so.4, type: "sudo apt-get install libgconf-2-4"
+
+
+Once the npm packages have been installed, locate the root directory of the project (Path/To/KanjiGuesser/), 
+and type the following to start the program: "npm start". 
 
 ## Appreciations to
 
