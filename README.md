@@ -2,7 +2,7 @@
 
 KanjiGuesser is a simple application to test your kanji skills. The project is still in it's early stages, which means that a lot of things lack perfection.
 
-I allow any individual/organization the permission to fork the project, and allow them to make any changes to the code without requesting my permission. 
+I allow any individual/organization the permission to fork the project. 
 If a fork is made, a reference to me would be appreciated, but not a must. 
 
 This is just a personal project, which means that updates/changes may occur spontaneously, and the project may reach a permanent standstill at any point.
