@@ -14,7 +14,7 @@ Prior to beginning the first step, please update your repositories. On Debian ba
 "sudo apt update", or "sudo apt-get update".
 
 
-The application is built using NodeJS and Electron, first we need to install the latest version of NodeJS(3 steps):
+The application is built using NodeJS and Electron, first we need to install the latest version of NodeJS(3 steps): <br>
 1: "sudo apt install curl" <br>
 2: "curl -sL https://deb.nodesource.com/setup_17.x | sudo -E bash -"<br>
 3: "sudo apt-get install -y nodejs"
